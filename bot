@@ -1,0 +1,14 @@
+from telegram.ext import *
+def main():
+  updater =Updater(5346702246:AAF9Ax61MOXX1GRlQQS0Wd8hPcxw42ewRnI)
+  dispatcher = updater.dispatcher
+  dispatcher.add_handler(CommandHandler('start', start))
+  dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.comand, eho))
+  updater.start_polling()
+  updater.idle()
+def start(update = Update, context = CallbackContext):
+  update.message.reply_text('Hi User')
+def eho(update = Update, context=@my_test_python_wasap_bot):
+  update.message.text(update.message.text)
+  
+main()
