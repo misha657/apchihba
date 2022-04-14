@@ -1,6 +1,6 @@
 from telegram.ext import *
 def main():
-  updater =Updater(5346702246:AAF9Ax61MOXX1GRlQQS0Wd8hPcxw42ewRnI)
+  updater =Updater('5346702246:AAF9Ax61MOXX1GRlQQS0Wd8hPcxw42ewRnI')
   dispatcher = updater.dispatcher
   dispatcher.add_handler(CommandHandler('start', start))
   dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.comand, eho))
